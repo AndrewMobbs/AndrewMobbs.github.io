@@ -1,0 +1,3 @@
+# Andrew Mobbs "blog"
+
+"blog" might imply some sort of regular updates...
