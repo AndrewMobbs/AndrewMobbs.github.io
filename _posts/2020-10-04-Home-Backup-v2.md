@@ -2,6 +2,7 @@
 
 I've recently improved my home data storage and backups, and thought it worth writing up the architecture.
 
+{% plantuml %}
 @startuml
 actor "User" as actU
 usecase "Consume Media" as UC1
@@ -14,6 +15,7 @@ actU --> UC2
 actU --> UC3
 UC2 <.. UC2a : <<extends>>
 @enduml
+{% endplantuml %}
 
 The bulk of data stored is a library of ripped DVDs and Bluray Discs, there's also network drives for shared data (like family photos) and for each user.
 
@@ -43,6 +45,7 @@ Malware is mitigated by use of a secure gateway, providing an append-only API fo
 Should the main house network suffer a malware attack, there should be no way for it to spread to the secondary NAS, other than via vulnerabilities in one of the two exposed interfaces.
 
 ## Implementation
+{% plantuml %}
 @startuml
 hide empty members
 hide <<block>> circle
@@ -169,6 +172,7 @@ Admin --# "HMI" MacPro
 "NFS (Drobo)" )-- "192_168_4_102" 
 
 @enduml
+{% endplantuml %}
 
 ### Hardware
 
